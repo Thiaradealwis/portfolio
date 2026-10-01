@@ -40,7 +40,7 @@ export default function Journalism() {
                     variant="experience"
                 />
             </div>
-
+            <div className="jline"></div>
             <div className="subpage">
                 <Section
                     id="journalism"
