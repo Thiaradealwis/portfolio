@@ -9,21 +9,47 @@ import ContactCard from "./Contact.jsx";
 function Layout() {
     const location = useLocation();
     const isHome = location.pathname === "/";
-    const [scrolled, setScrolled] = useState(false);
+    const [navVisible, setNavVisible] = useState(true);
 
     useEffect(() => {
+        if (!isHome) {
+            setNavVisible(true);
+            return;
+        }
+
         const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
+            // Always show the nav when at the top of the page
+            if (window.scrollY <= 10) {
+                setNavVisible(true);
+            } else {
+                setNavVisible(false);
+            }
+        };
+
+        const handleMouseMove = (event) => {
+            // Show the nav when the mouse reaches the top of the screen
+            if (event.clientY <= 40) {
+                setNavVisible(true);
+            } else if (window.scrollY > 10) {
+                setNavVisible(false);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("mousemove", handleMouseMove);
 
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, [isHome]);
 
     return (
         <div className="page">
-            <Nav hidden={isHome && !scrolled} isHome={isHome} />
+            <Nav
+                hidden={isHome && !navVisible}
+                isHome={isHome}
+            />
 
             <Outlet />
 

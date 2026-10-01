@@ -107,7 +107,7 @@ const StyledWrapper = styled.div`
 
   .ed-stat-card__numeral {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1;
     letter-spacing: 0.01em;
     font-weight: 400;
