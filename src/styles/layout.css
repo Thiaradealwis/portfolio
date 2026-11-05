@@ -1,0 +1,25 @@
+.site { min-height: 100vh; display: flex; flex-direction: column; }
+
+.page { flex: 1; display: flex; flex-direction: column; gap: var(--section-gap); padding-block: 32px var(--section-gap); }
+
+/* Header */
+.site-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; padding-block: 32px 0; }
+.logo { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 700; font-size: 24px; }
+.logo__stripes { display: flex; flex-direction: column; gap: 3px; }
+.logo__stripes span { width: 26px; height: 5px; border-radius: 3px; }
+.logo__stripes span:nth-child(1) { background: var(--orange); }
+.logo__stripes span:nth-child(2) { background: var(--caramel); }
+.logo__stripes span:nth-child(3) { background: var(--plum); }
+
+.site-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 32px; font-weight: 500; }
+.site-nav__link { padding-block: 6px; border-bottom: 2px solid transparent; }
+.site-nav__link.active { border-bottom-color: var(--orange); }
+
+/* Footer */
+.site-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; padding-block: 0 56px; color:var(--black)}
+.site-footer__heading { font-family: var(--font-mono); font-weight: 500; font-size: 24px; }
+
+/* List pages (Projects, Publications) */
+.content-page { display: flex; flex-direction: column; gap: 24px; min-height: 40vh; padding-top: 24px; }
+.empty-state { font-family: var(--font-mono); color: var(--plum); }
+.content-list { display: flex; flex-direction: column; gap: 12px; }

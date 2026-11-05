@@ -1,0 +1,24 @@
+.publications { display: flex; flex-direction: column; gap: 80px; }
+
+.publication-section {
+    display: flex; flex-direction: column; gap: 36px;
+    padding-bottom: 80px; border-bottom: 1.5px solid var(--line-strong);
+}
+.publication-section__heading { font-family: var(--font-display); font-weight: 500; font-size: 24px; }
+
+.publication { display: grid; grid-template-columns: 205px 1fr; gap: 16px 0; }
+.publication__year { padding-left: 16px; font-size: 15px; font-weight: 500; color: var(text); }
+.publication__title { max-width: 560px; font-family: var(--font-mono); font-weight: 700; font-size: 26px; line-height: 1.15; color:var(--black)}
+.publication__venue { margin-top: 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--plum); }
+.publication__authors { margin-top: 24px; font-size: 17px; line-height: 1.5; color:var(--text)}
+
+/* Journalism: linked titles, bold on hover (width reserved so nothing shifts) */
+.article-title { max-width: 560px; font-family: var(--font-mono); font-weight: 400; font-size: 26px; line-height: 1.15;color:var(--black) }
+.article-link { display: inline-block; }
+.article-link::after {
+    content: attr(data-text); display: block; height: 0; overflow: hidden;
+    visibility: hidden; font-weight: 700;
+}
+.article-link:hover { opacity: 1; font-weight: 700; }
+
+@media (max-width: 720px) { .publication { grid-template-columns: 1fr; } .publication__year { padding-left: 0; } }

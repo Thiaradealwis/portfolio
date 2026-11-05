@@ -1,0 +1,34 @@
+/* Design tokens: change colours, fonts and spacing here. */
+:root {
+  --paper: #fffbf4;
+  --ink: #421454;
+  --orange: #ffa500;
+  --caramel: #bd632f;
+  --blank: transparent;
+  --plum: #6b0a43;
+  --amaranth: #930031;
+  --charcoal: #273e47;
+  --butter: #ffe2ae;
+  --ink-muted: #5b3a68;
+  --line: #e6dccb;
+  --line-strong: #a89a82;
+  --black: black;
+
+  --font-display: 'Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --radius-sm: 16px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 28px 48px -12px rgba(66, 20, 84, 0.4), 0 8px 16px -4px rgba(66, 20, 84, 0.2), inset 0 1px 0 #fff;
+  --shadow-panel: 0 40px 70px -28px rgba(66, 20, 84, 0.45), 0 14px 28px -10px rgba(66, 20, 84, 0.2);
+  --shadow-button: 0 14px 22px -10px rgba(66, 20, 84, 0.6);
+  --shadow-pill: 0 8px 14px -8px rgba(66, 20, 84, 0.35);
+
+  --page-max: 1360px;
+  --page-pad: clamp(20px, 5vw, 64px);
+  --section-gap: clamp(56px, 8vw, 96px);
+  --text: #2f2d2d;
+}
